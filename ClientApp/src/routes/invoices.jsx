@@ -6,6 +6,9 @@ import {
   Outlet,
   useSearchParams,
 } from 'react-router-dom';
+
+import TextField from '@mui/material/TextField';
+
 import { getInvoices } from '../data';
 
 function QueryNavLink({ to, ...props }) {
@@ -20,7 +23,8 @@ export default function Invoices() {
   return (
     <div style={{ display: 'flex' }}>
       <nav style={{ borderRight: 'solid 1px', padding: '1rem' }}>
-        <input
+        <TextField
+          label="Search"
           value={searchParams.get('filter') || ''}
           onChange={(event) => {
             let filter = event.target.value;

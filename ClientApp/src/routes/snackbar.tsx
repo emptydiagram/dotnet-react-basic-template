@@ -65,6 +65,7 @@ export default function SnackbarDemo() {
     }
   }
 
+  const severities = ['error', 'warning', 'info', 'success'];
   return (
     <>
     <FormControl sx={{minWidth: 110}}>
@@ -77,10 +78,8 @@ export default function SnackbarDemo() {
         onChange={handleChange}
       >
         <MenuItem value=""></MenuItem>
-        <MenuItem value="error">error</MenuItem>
-        <MenuItem value="warning">warning</MenuItem>
-        <MenuItem value="info">info</MenuItem>
-        <MenuItem value="success">success</MenuItem>
+        {severities.map(sev =>
+          <MenuItem value={sev}>{sev}</MenuItem>)};
       </Select>
     </FormControl>
 

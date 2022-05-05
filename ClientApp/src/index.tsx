@@ -9,7 +9,7 @@ import {
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-import Expenses from './routes/expenses';
+import Adder from './routes/Adder';
 import Invoices from './routes/invoices';
 import Invoice from './routes/invoice';
 
@@ -21,7 +21,7 @@ root.render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />}>
-          <Route path="expenses" element={<Expenses />} />
+          <Route path="adder" element={<Adder />} />
           <Route path="invoices" element={<Invoices />}>
             <Route
               index

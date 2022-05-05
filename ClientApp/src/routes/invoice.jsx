@@ -1,6 +1,7 @@
 import * as React from 'react';
-
+import Button from '@mui/material/Button';
 import { useParams, useNavigate } from 'react-router-dom';
+
 import { getInvoice, deleteInvoice } from '../data';
 
 export default function Invoice() {
@@ -16,14 +17,14 @@ export default function Invoice() {
       </p>
       <p>Due Date: {invoice.due}</p>
       <p>
-        <button
+        <Button variant="contained"
           onClick={() => {
             deleteInvoice(invoice.number);
             navigate('/invoices');
           }}
         >
           Delete
-        </button>
+        </Button>
       </p>
     </main>
   );

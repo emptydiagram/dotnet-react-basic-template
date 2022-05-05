@@ -13,6 +13,7 @@ import Adder from './routes/Adder';
 import Invoices from './routes/invoices';
 import Invoice from './routes/invoice';
 import SnackbarDemo from './routes/snackbar';
+import { FetchData } from './routes/fetchdata';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -35,6 +36,7 @@ root.render(
             <Route path=":invoiceId" element={<Invoice />} />
           </Route>
           <Route path="snackbar" element={<SnackbarDemo />} />
+          <Route path="fetchdata" element={<FetchData />} />
         </Route>
       </Routes>
     </BrowserRouter>

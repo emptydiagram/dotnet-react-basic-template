@@ -24,7 +24,8 @@ export default function App() {
         <nav style={{ borderBottom: 'solid 1px', padding: '1rem 0' }}>
           <Link to="/invoices">Invoices</Link> |{' '}
           <Link to="/adder">Adder</Link> |{' '}
-          <Link to="/snackbar">Snackbar</Link>
+          <Link to="/snackbar">Snackbar</Link> |{' '}
+          <Link to="/fetchdata">Fetch data</Link>
         </nav>
         <Outlet />
       </div>

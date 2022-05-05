@@ -1,5 +1,13 @@
 import React, { Component } from 'react';
 
+import Table from '@mui/material/Table';
+import TableBody from '@mui/material/TableBody';
+import TableCell from '@mui/material/TableCell';
+import TableContainer from '@mui/material/TableContainer';
+import TableHead from '@mui/material/TableHead';
+import TableRow from '@mui/material/TableRow';
+import Paper from '@mui/material/Paper';
+
 export class FetchData extends Component {
   static displayName = FetchData.name;
 
@@ -14,26 +22,28 @@ export class FetchData extends Component {
 
   static renderForecastsTable(forecasts) {
     return (
-      <table className='table table-striped' aria-labelledby="tabelLabel">
-        <thead>
-          <tr>
-            <th>Date</th>
-            <th>Temp. (C)</th>
-            <th>Temp. (F)</th>
-            <th>Summary</th>
-          </tr>
-        </thead>
-        <tbody>
-          {forecasts.map(forecast =>
-            <tr key={forecast.date}>
-              <td>{forecast.date}</td>
-              <td>{forecast.temperatureC}</td>
-              <td>{forecast.temperatureF}</td>
-              <td>{forecast.summary}</td>
-            </tr>
-          )}
-        </tbody>
-      </table>
+      <TableContainer component={Paper}>
+        <Table className='table table-striped' aria-labelledby="tabelLabel">
+          <TableHead>
+            <TableRow>
+              <TableCell>Date</TableCell>
+              <TableCell>Temp. (C)</TableCell>
+              <TableCell>Temp. (F)</TableCell>
+              <TableCell>Summary</TableCell>
+            </TableRow>
+          </TableHead>
+          <tbody>
+            {forecasts.map(forecast =>
+              <TableRow key={forecast.date}>
+                <TableCell>{forecast.date}</TableCell>
+                <TableCell>{forecast.temperatureC}</TableCell>
+                <TableCell>{forecast.temperatureF}</TableCell>
+                <TableCell>{forecast.summary}</TableCell>
+              </TableRow>
+            )}
+          </tbody>
+        </Table>
+      </TableContainer>
     );
   }
 

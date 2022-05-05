@@ -12,6 +12,7 @@ import reportWebVitals from './reportWebVitals';
 import Adder from './routes/Adder';
 import Invoices from './routes/invoices';
 import Invoice from './routes/invoice';
+import SnackbarDemo from './routes/snackbar';
 
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
@@ -33,6 +34,7 @@ root.render(
             />
             <Route path=":invoiceId" element={<Invoice />} />
           </Route>
+          <Route path="snackbar" element={<SnackbarDemo />} />
         </Route>
       </Routes>
     </BrowserRouter>

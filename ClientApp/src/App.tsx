@@ -6,12 +6,12 @@ export default function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>Demo</p>
+        <p>Demos</p>
       </header>
-      <h1>Bookkeeper</h1>
-      <nav style={{ borderBottom: 'solid 1px', paddingBottom: '1rem' }}>
+      <nav style={{ borderBottom: 'solid 1px', padding: '1rem 0' }}>
         <Link to="/invoices">Invoices</Link> |{' '}
-        <Link to="/adder">Adder</Link>
+        <Link to="/adder">Adder</Link> |{' '}
+        <Link to="/snackbar">Snackbar</Link>
       </nav>
       <Outlet />
     </div>
